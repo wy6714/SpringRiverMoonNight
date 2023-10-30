@@ -28,11 +28,11 @@ public class WaterFloat : MonoBehaviour
             actualPos.position.y + Mathf.Sin(speed * Time.time) * MovingDistances.y, 
             actualPos.position.z + Mathf.Sin(speed * Time.time) * MovingDistances.z
         );
-        
+
         //change rotations
         transform.rotation = Quaternion.Euler(
-            actualPos.rotation.x + WaveRotations.x * Mathf.Sin(Time.time * WaveRotationsSpeed), 
-            actualPos.rotation.y + WaveRotations.y * Mathf.Sin(Time.time * WaveRotationsSpeed), 
+            actualPos.rotation.x + WaveRotations.x * Mathf.Sin(Time.time * WaveRotationsSpeed),
+            actualPos.rotation.y + WaveRotations.y * Mathf.Sin(Time.time * WaveRotationsSpeed),
             actualPos.rotation.z + WaveRotations.z * Mathf.Sin(Time.time * WaveRotationsSpeed)
         );
 

@@ -6,27 +6,53 @@ public class boatController : MonoBehaviour
 {
     public Transform MoonPosition;
     public GameObject cubeObj;
-    public float speed = 0.5f;
+    public float speed = 5f;
+    public float rotateSpeed = 45f;
+    private float RotateValue;
+    public float RotateAmount = 100f;
+    private CharacterController characterController;
     // Start is called before the first frame update
     void Start()
     {
         float zDis = MoonPosition.position.z - transform.position.z;
         float xDis = Mathf.Abs(MoonPosition.position.x - transform.position.x);
         Debug.Log("zDis: " + zDis + "; xDis: " + xDis + ".");
+
+
+        characterController = GetComponent<CharacterController>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        float hInput = Input.GetAxis("Horizontal");
+        float vInput = Input.GetAxis("Vertical");
+        Vector3 move = new Vector3(hInput, 0, vInput);
+        move.Normalize();
+
+        //rotate
+        RotateValue += hInput * RotateAmount * Time.deltaTime;
+        transform.localRotation = Quaternion.Euler(Vector3.up * RotateValue);
+
+        characterController.Move(move * speed * Time.deltaTime);
+        
+
+    }
         //Vector3 direction = (transform.position - MoonPosition.position).normalized;
         ////direction.y = 0f;
         //transform.position = Vector3.Lerp(transform.position, MoonPosition.position, speed * Time.deltaTime);
 
-        for (int z = 0; z < 380; z++)
-        {
-            GameObject cube = Instantiate(cubeObj, new Vector3(MoonPosition.position.x-10f, 0, (transform.position.z + 10f)+1f*z), Quaternion.identity);
-            Instantiate(cubeObj, new Vector3(MoonPosition.position.x + 10f, 0, (transform.position.z + 10f) + 1f * z), Quaternion.identity);
-        }
+        //for (int z = 0; z < 380; z++)
+        //{
+        //    GameObject cube = Instantiate(cubeObj, new Vector3(MoonPosition.position.x-10f, 0, (transform.position.z + 10f)+1f*z), Quaternion.identity);
+        //    Instantiate(cubeObj, new Vector3(MoonPosition.position.x + 10f, 0, (transform.position.z + 10f) + 1f * z), Quaternion.identity);
+        //}
+
+
+        //control boat movement
         
-    }
 }
+    
+    
+
