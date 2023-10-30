@@ -11,6 +11,9 @@ public class boatController : MonoBehaviour
     private float RotateValue;
     public float RotateAmount = 100f;
     private CharacterController characterController;
+
+
+    public int count;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +39,25 @@ public class boatController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(Vector3.up * RotateValue);
 
         characterController.Move(move * speed * Time.deltaTime);
-        
+
+        if(count == 8)
+        {
+            float d = 9999999;
+            int i = 0;
+            while (d > 1)
+            {
+                Vector3 v = MoonPosition.position - transform.position;
+                v.Normalize();
+                Vector3 pos = transform.position + v * i;
+                i++;
+                d = Vector3.Distance(pos, MoonPosition.position);
+                Instantiate(cubeObj, pos, Quaternion.identity);
+                
+
+            }
+            count += 1;
+                
+        }
 
     }
         //Vector3 direction = (transform.position - MoonPosition.position).normalized;
