@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Water Float/Demo/Demo.unity
+    guid: f7b9b47fc5ff2b24e9f6c4874cd7cdca
   m_configObjects: {}

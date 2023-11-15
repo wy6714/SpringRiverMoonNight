@@ -31,8 +31,8 @@ public class boatController : MonoBehaviour
     {
         float hInput = Input.GetAxis("Horizontal");
         float vInput = Input.GetAxis("Vertical");
-        //Vector3 move = new Vector3(hInput, 0, vInput);
-        Vector3 move = new Vector3(hInput, 0, 1f);
+        Vector3 move = new Vector3(hInput, 0, vInput);
+        //Vector3 move = new Vector3(hInput, 0, 0);
         move.Normalize();
 
         //rotate
