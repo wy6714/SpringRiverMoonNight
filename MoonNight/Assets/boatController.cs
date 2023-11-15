@@ -23,7 +23,7 @@ public class boatController : MonoBehaviour
 
 
         characterController = GetComponent<CharacterController>();
-        
+
     }
 
     // Update is called once per frame
@@ -40,40 +40,49 @@ public class boatController : MonoBehaviour
 
         characterController.Move(move * speed * Time.deltaTime);
 
-        if(count == 8)
+        if (count == 8)
         {
-            float d = 9999999;
-            int i = 0;
-            while (d > 1)
-            {
-                Vector3 v = MoonPosition.position - transform.position;
-                v.Normalize();
-                Vector3 pos = transform.position + v * i;
-                i++;
-                d = Vector3.Distance(pos, MoonPosition.position);
-                Instantiate(cubeObj, pos, Quaternion.identity);
-                
+            showRoad();
+            transform.LookAt(new Vector3(MoonPosition.position.x,
+                MoonPosition.position.y,
+                MoonPosition.position.z));
 
-            }
-            count += 1;
-                
         }
 
+
     }
-        //Vector3 direction = (transform.position - MoonPosition.position).normalized;
-        ////direction.y = 0f;
-        //transform.position = Vector3.Lerp(transform.position, MoonPosition.position, speed * Time.deltaTime);
+    private void showRoad()
+    {
+        float d = 9999999;
+        int i = 0;
+        while (d > 1)
+        {
+            Vector3 v = MoonPosition.position - transform.position;
+            v.Normalize();
+            Vector3 pos = transform.position + v * i;
+            i++;
+            d = Vector3.Distance(pos, MoonPosition.position);
+            Instantiate(cubeObj, pos, Quaternion.identity);
 
-        //for (int z = 0; z < 380; z++)
-        //{
-        //    GameObject cube = Instantiate(cubeObj, new Vector3(MoonPosition.position.x-10f, 0, (transform.position.z + 10f)+1f*z), Quaternion.identity);
-        //    Instantiate(cubeObj, new Vector3(MoonPosition.position.x + 10f, 0, (transform.position.z + 10f) + 1f * z), Quaternion.identity);
-        //}
-
-
-        //control boat movement
+        }
+        count += 1;
         
+
+    }
+
+    //Vector3 direction = (transform.position - MoonPosition.position).normalized;
+    ////direction.y = 0f;
+    //transform.position = Vector3.Lerp(transform.position, MoonPosition.position, speed * Time.deltaTime);
+
+    //for (int z = 0; z < 380; z++)
+    //{
+    //    GameObject cube = Instantiate(cubeObj, new Vector3(MoonPosition.position.x-10f, 0, (transform.position.z + 10f)+1f*z), Quaternion.identity);
+    //    Instantiate(cubeObj, new Vector3(MoonPosition.position.x + 10f, 0, (transform.position.z + 10f) + 1f * z), Quaternion.identity);
+    //}
+
+
+    //control boat movement
 }
-    
-    
+
+
 
