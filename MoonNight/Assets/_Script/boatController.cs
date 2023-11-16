@@ -6,11 +6,9 @@ public class boatController : MonoBehaviour
 {
     public Transform MoonPosition;
     public GameObject cubeObj;
-    public float speed = 5f;
-    public float rotateSpeed = 45f;
-    private float RotateValue;
-    public float RotateAmount = 100f;
-    private CharacterController characterController;
+
+    public float moveSpeed = 5f;
+    public float rotationSpeed = 200f;
 
 
     public int count;
@@ -21,25 +19,22 @@ public class boatController : MonoBehaviour
         float xDis = Mathf.Abs(MoonPosition.position.x - transform.position.x);
         Debug.Log("zDis: " + zDis + "; xDis: " + xDis + ".");
 
-
-        characterController = GetComponent<CharacterController>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        float hInput = Input.GetAxis("Horizontal");
-        float vInput = Input.GetAxis("Vertical");
-        Vector3 move = new Vector3(hInput, 0, vInput);
-        //Vector3 move = new Vector3(hInput, 0, 0);
-        move.Normalize();
+        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 
-        //rotate
-        RotateValue += hInput * RotateAmount * Time.deltaTime;
-        transform.localRotation = Quaternion.Euler(Vector3.up * RotateValue);
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
+        }
 
-        characterController.Move(move * speed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        }
 
         if (count == 8)
         {
