@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class boatController : MonoBehaviour
 {
@@ -66,18 +67,25 @@ public class boatController : MonoBehaviour
 
     }
 
-    //Vector3 direction = (transform.position - MoonPosition.position).normalized;
-    ////direction.y = 0f;
-    //transform.position = Vector3.Lerp(transform.position, MoonPosition.position, speed * Time.deltaTime);
 
-    //for (int z = 0; z < 380; z++)
-    //{
-    //    GameObject cube = Instantiate(cubeObj, new Vector3(MoonPosition.position.x-10f, 0, (transform.position.z + 10f)+1f*z), Quaternion.identity);
-    //    Instantiate(cubeObj, new Vector3(MoonPosition.position.x + 10f, 0, (transform.position.z + 10f) + 1f * z), Quaternion.identity);
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("angle before rotate: " + transform.rotation.eulerAngles);
+        if (other.CompareTag("tornado"))
+        {
+            Debug.Log("collide with tornado");
+            RotateRandamly();
+            Debug.Log("angle after rotate: " + transform.rotation.eulerAngles);
+        }
 
+    }
 
-    //control boat movement
+    public void RotateRandamly()
+    {
+        float randomRotationAngle = Random.Range(0f, 360f);
+        Vector3 randomRotation = new Vector3(0f, randomRotationAngle, 0f);
+        transform.Rotate(randomRotation);
+    }
 }
 
 

@@ -10228,7 +10228,7 @@ GameObject:
   - component: {fileID: 1455964128}
   m_Layer: 0
   m_Name: Tornado
-  m_TagString: Untagged
+  m_TagString: tornado
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10248,7 +10248,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -10312,9 +10312,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455964127}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.1, y: 6.2777653, z: -26.44}
-  m_LocalScale: {x: 2.7609553, y: 9.256949, z: 2.9381928}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -23.1, y: 6.2777653, z: -26.440002}
+  m_LocalScale: {x: 3, y: 10, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 809507817}
@@ -15619,8 +15619,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982969389}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03499835, y: 0.000000025647896, z: 8.9818436e-10, w: 0.9993874}
-  m_LocalPosition: {x: -23.04, y: -3.86, z: -59.120003}
+  m_LocalRotation: {x: -0.033286832, y: 0.9051361, z: 0.072102495, w: 0.41763842}
+  m_LocalPosition: {x: -33.843063, y: -2.646281, z: -44.368195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15646,6 +15646,8 @@ GameObject:
   - component: {fileID: 2009559945}
   - component: {fileID: 2009559948}
   - component: {fileID: 2009559947}
+  - component: {fileID: 2009559950}
+  - component: {fileID: 2009559949}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Untagged
@@ -15713,6 +15715,54 @@ MonoBehaviour:
   moveSpeed: 5
   rotationSpeed: 200
   count: 0
+--- !u!54 &2009559949
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009559943}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2009559950
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009559943}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 4, z: 3}
+  m_Center: {x: 0, y: 0, z: 5}
 --- !u!1 &2018891874
 GameObject:
   m_ObjectHideFlags: 0
@@ -20690,5 +20740,5 @@ SceneRoots:
   - {fileID: 2009559945}
   - {fileID: 1982969391}
   - {fileID: 1146639638}
-  - {fileID: 1114497816}
   - {fileID: 1455964131}
+  - {fileID: 1114497816}
