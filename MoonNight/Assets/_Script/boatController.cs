@@ -1,7 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.EventSystems.EventTrigger;
+using Random = UnityEngine.Random;
 
 public class boatController : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class boatController : MonoBehaviour
 
 
     public int count;
+
     // Start is called before the first frame update
     void Start()
     {
