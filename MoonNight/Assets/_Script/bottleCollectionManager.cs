@@ -15,12 +15,14 @@ public class bottleCollectionManager : MonoBehaviour
 
     public GameObject MsgPanel;
     public TMP_Text MsgText;
+    public GameObject WaterBridgeTrigger;
     
     private void OnEnable()
     {
         Bottle.collectBottleHappened += trackBottleNum;
         Bottle.collectBottleHappened += showBottleMessage;
         Bottle.collectBottleHappened += showMsg;
+        Bottle.collectBottleHappened += showWaterBridgeTrigger;
     }
 
     private void OnDisable()
@@ -28,12 +30,14 @@ public class bottleCollectionManager : MonoBehaviour
         Bottle.collectBottleHappened -= trackBottleNum;
         Bottle.collectBottleHappened -= showBottleMessage;
         Bottle.collectBottleHappened -= showMsg;
+        Bottle.collectBottleHappened -= showWaterBridgeTrigger;
     }
     // Start is called before the first frame update
     void Start()
     {
         bottleMsgPanel.SetActive(false);
         MsgPanel.SetActive(false);
+        WaterBridgeTrigger.SetActive(false);
     }
 
     // Update is called once per frame
@@ -88,4 +92,13 @@ public class bottleCollectionManager : MonoBehaviour
     }
 
     public void setBoatSpeed(float speed) => boat.GetComponent<boatController>().moveSpeed = speed;
+
+    public void showWaterBridgeTrigger(GameObject obj)
+    {
+        if (bottleNum == 3)
+        {
+            WaterBridgeTrigger.SetActive(true);
+        }
+        
+    }
 }
