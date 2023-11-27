@@ -22,6 +22,7 @@ public class boatController : MonoBehaviour
     public float increaseSpeed = 80f;
 
     public Transform moon;
+    public GameObject EndMsg;
 
 
     //public int count;
@@ -33,6 +34,7 @@ public class boatController : MonoBehaviour
         //float xDis = Mathf.Abs(MoonPosition.position.x - transform.position.x);
         //Debug.Log("zDis: " + zDis + "; xDis: " + xDis + ".");
         waterBridgeObj.SetActive(false);
+        EndMsg.SetActive(false);
 
     }
 
@@ -101,6 +103,7 @@ public class boatController : MonoBehaviour
         if (other.CompareTag("WaterBridgeTrigger"))
         {
             waterBridgeObj.SetActive(true);
+            EndMsg.SetActive(true);
             rotationSpeed = 0f;
             //moveSpeed = 0f;
             
