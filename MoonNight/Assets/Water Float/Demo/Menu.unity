@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24836168, g: 0.24875987, b: 0.33757868, a: 1}
+  m_IndirectSpecularColor: {r: 0.24836221, g: 0.2487602, b: 0.3375796, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1126,9 +1126,9 @@ RectTransform:
   - {fileID: 1310843797}
   m_Father: {fileID: 637752521}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 324, y: -71}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -76, y: -71}
   m_SizeDelta: {x: 110, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &114021594
@@ -1314,9 +1314,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 637752521}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -97, y: -50}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -382.7, y: -17}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &125747865
@@ -1373,8 +1373,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 4
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3034,9 +3034,9 @@ RectTransform:
   - {fileID: 327077584}
   m_Father: {fileID: 637752521}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345.5, y: -152}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -55.3, y: -152}
   m_SizeDelta: {x: 70, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &315361515
@@ -4333,9 +4333,9 @@ RectTransform:
   - {fileID: 1401898459}
   m_Father: {fileID: 637752521}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 322.8, y: -110}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -78, y: -110}
   m_SizeDelta: {x: 115, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &393710120
@@ -15709,8 +15709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 252.33984, y: 106.97662}
-  m_SizeDelta: {x: 239.4959, y: 150.0467}
+  m_AnchoredPosition: {x: 195, y: 106.97662}
+  m_SizeDelta: {x: 120, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1983307336
 MonoBehaviour:
@@ -15732,9 +15732,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Credit:\nAuthor: MinghengLi & Yifei Wang\n\nMusic by\_Ada79452\_from\_Pixabay\n\nWater
-    & Boat & Bottle by Pathiral\nhttps://shorturl.at/bgqMZ\n\nMoon textture by Glitch
-    Squirrel\nhttps://shorturl.at/kyBF2"
+  m_text: "Author: MinghengLi & Yifei Wang\n- Music by\_Ada79452\_from\_Pixabay\n-
+    Water & Boat & Bottle by Pathiral\nhttps://shorturl.at/bgqMZ\n- Moon textture
+    by Glitch Squirrel\nhttps://shorturl.at/kyBF2\n- Cursed Priest by Serhat Yucekaya\nhttps://reurl.cc/OjlqNR
+    \r\n- Yughues Free Bushes by Nobiax / Yughues\nhttps://reurl.cc/a4ovKY\n- Free
+    Island Collection by Bicameral Studios\nhttps://reurl.cc/q0x8eE \r\n- Asian Tree
+    by past12pm\nhttps://reurl.cc/9RjX8j "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15768,7 +15771,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -15797,7 +15800,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -16.62386, y: -6.6885223, z: -130.1708, w: -10.371033}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
