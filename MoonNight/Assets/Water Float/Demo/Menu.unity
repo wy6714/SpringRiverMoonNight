@@ -3870,8 +3870,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 310042411978818784, guid: a054120b03c7648b28daaeb5295ae1a1, type: 3}
       propertyPath: message
-      value: The  In lunar silence, the moon awaits, for one worthy of a celestial
-        wait. is waiting for the person who is worth being waited for.
+      value: In silence, the moon awaits, for one worthy of a celestial wait. The
+        lunar is waiting for the person who is worth being waited for.
       objectReference: {fileID: 0}
     - target: {fileID: 874963478746812270, guid: a054120b03c7648b28daaeb5295ae1a1, type: 3}
       propertyPath: m_LocalPosition.x
