@@ -14520,8 +14520,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982969389}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20756431, y: 0.62349355, z: 0.17657304, w: -0.7327993}
-  m_LocalPosition: {x: 387.48346, y: -186.91754, z: 102.80759}
+  m_LocalRotation: {x: 0.026048372, y: -0.49449086, z: 0.014874475, w: 0.8686651}
+  m_LocalPosition: {x: 37.07952, y: -18.308369, z: 19.470139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14871,7 +14871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoonPosition: {fileID: 1146639638}
-  moveSpeed: 10
+  moveSpeed: 20
   rotationSpeed: 200
   waterBridgeObj: {fileID: 1435432935}
   waterBridgePos: {fileID: 1435432936}
