@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class bottleCollectionManager : MonoBehaviour
 {
-    protected float boatMoveSpeed = 5f;
+    protected float boatMoveSpeed = 10f;
     protected float boatStopSpeed = 0f;
     private int bottleNum = 0;
     public GameObject boat;
