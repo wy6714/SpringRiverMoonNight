@@ -10,7 +10,7 @@ public class boatController : MonoBehaviour
     public Transform MoonPosition;
     //public GameObject cubeObj;
 
-    public float moveSpeed = 5f;
+    public float moveSpeed = 20f;
     public float rotationSpeed = 200f;
 
     public GameObject waterBridgeObj;
