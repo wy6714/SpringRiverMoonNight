@@ -14871,7 +14871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoonPosition: {fileID: 1146639638}
-  moveSpeed: 20
+  moveSpeed: 10
   rotationSpeed: 200
   waterBridgeObj: {fileID: 1435432935}
   waterBridgePos: {fileID: 1435432936}

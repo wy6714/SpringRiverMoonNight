@@ -7,7 +7,7 @@ public class BoatActionManager : MonoBehaviour
 {
     public GameObject boat;
     public GameObject airBlock;
-    private float boatNormalSpeed = 20f;
+    private float boatNormalSpeed = 10f;
     private float boatInBushSpeed = 5f;
     //private float boatAutoMoveSpeed = 10f;
     //public Transform targetPosition;
