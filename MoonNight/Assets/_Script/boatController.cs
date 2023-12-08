@@ -10,7 +10,7 @@ public class boatController : MonoBehaviour
     public Transform MoonPosition;
     //public GameObject cubeObj;
 
-    public float moveSpeed = 20f;
+    public float moveSpeed = 10f;
     public float rotationSpeed = 200f;
 
     public GameObject waterBridgeObj;
@@ -124,7 +124,7 @@ public class boatController : MonoBehaviour
     {
         if (other.CompareTag("AirBlock"))
         {
-            moveSpeed = 5f;
+            moveSpeed = 10f;
         }
     }
 
