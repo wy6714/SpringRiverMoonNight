@@ -39,4 +39,8 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Demo");
     }
+    public void QuitButton()
+    {
+        Application.Quit();
+    }
 }

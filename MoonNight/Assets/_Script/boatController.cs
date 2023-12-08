@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class boatController : MonoBehaviour
@@ -53,8 +54,13 @@ public class boatController : MonoBehaviour
             transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
         }
 
+        if (Input.GetKey("escape"))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
         //pass stop position, stop
-        if(transform.position.z > stopPos.position.z)
+        if (transform.position.z > stopPos.position.z)
         {
             moveSpeed = 0;
         }
